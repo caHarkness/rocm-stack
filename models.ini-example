@@ -1,0 +1,26 @@
+# Global settings applied to all routed models
+[*]
+n-gpu-layers = -1
+ctx-size = 262144
+fit = off
+cache-type-k = q4_1
+cache-type-v = q4_1
+batch-size = 2048
+ubatch-size = 1024
+jinja = true
+reasoning = on
+flash-attn = on
+
+[qwen3.8-27b]
+model = models/Swift-1.5-Qwen3.8-27B-Uncensored-Dynamic-MTP-RCO-IQ3_XXS.gguf
+mmproj = models/mmproj-Swift-1.5-Qwen3.8-27B-Uncensored-Dynamic-MTP-RCO-BF16.gguf
+spec-type = draft-mtp
+spec-draft-n-max = 2
+load-on-startup = false
+
+[cyber-tiel-coder]
+model = /shared/Apps/llama.cpp/models/Cyber-Tiel-Coder-35B-A3B-MTP-UD-IQ3_XXS.gguf
+mmproj = /shared/Apps/llama.cpp/models/mmproj-Cyber-Tiel-Coder-35B-A3B-MTP-UD-BF16.gguf
+spec-type = draft-mtp
+spec-draft-n-max = 2
+load-on-startup = true

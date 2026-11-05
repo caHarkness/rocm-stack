@@ -1,0 +1,17 @@
+{
+    "mcpServers": [{
+        "id": "Localhost",
+        "enabled": true,
+        "url": "http://localhost:8000/mcp",
+        "useProxy": true
+    }],
+    "showRawModelNames": true,
+    "agenticMaxTurns": 1000,
+    "agenticMaxPreviewLines": 2500,
+    "alwaysShowAgenticTurns": true,
+    "showThoughtInProgress": true,
+    "showToolCallInProgress": true,
+    "pdfAsImage": true,
+    "fullHeightCodeBlocks": true,
+    "systemMessage": false
+}

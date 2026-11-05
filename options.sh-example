@@ -1,0 +1,19 @@
+#!/bin/bash
+
+echo "Please make a copy of options.sh-example named options.sh and edit to remove this pause."
+sleep 5
+
+# 10.0 or 10.1
+export ROCM_VERSION="10.1"
+
+# gfx1201 = Radeon 9070 XT and R9700
+# gfx1151 = Strix Halo APUs
+export AMD_GPU="gfx1151"
+
+export HSA_OVERRIDE_GFX_VERSION=11.5.1
+
+export LD_LIBRARY_PATH=/opt/rocm/core-${ROCM_VERSION}/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/opt/rocm/core-${ROCM_VERSION}/lib/llvm/lib:$LD_LIBRARY_PATH
+
+export HIPCXX="$(hipconfig -l)/clang"
+export HIP_PATH="$(hipconfig -R)"
